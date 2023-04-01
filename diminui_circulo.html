@@ -14,9 +14,18 @@
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
 
-        if (evento.shiftKey) {
+        if(evento.shiftKey && evento.altKey) {
+            alert("Aperte apenas uma destas teclas por vez!")
+        }
+
+        if (evento.shiftKey && raio < 40) {
             raio = raio + 10;
         }
+
+        if(evento.altKey && raio > 10) {
+            raio = raio - 5;
+        }
+
         console.log(raio);
         
         pincel.fillStyle = 'blue';
