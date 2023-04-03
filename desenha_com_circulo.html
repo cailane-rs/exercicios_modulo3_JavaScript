@@ -25,4 +25,15 @@
     }
 
     tela.onmousemove = desenhaCirculo;
+
+    function deveExibirCirculo() {
+        desenha = true;
+    }
+
+    function naoDeveExibirCirculo() {
+        desenha = false;
+    }
+
+    tela.onmousedown = deveExibirCirculo;
+    tela.onmouseup = naoDeveExibirCirculo;
 </script>
